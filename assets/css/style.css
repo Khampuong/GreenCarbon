@@ -1,0 +1,148 @@
+/* GreenLoop Net Zero — ใช้ฟอนต์ของเครื่อง ไม่โหลดจากอินเทอร์เน็ต */
+:root {
+  --gl-green: #0f7b3f;
+  --gl-green-2: #3fae5a;
+  --gl-soft: #eef7f0;
+  --gl-line: #dbeadf;
+  --gl-ink: #1d2b22;
+}
+body {
+  font-family: "Leelawadee UI", "Sarabun", "TH Sarabun New", Tahoma, "Segoe UI", sans-serif;
+  background: #f6faf7;
+  color: var(--gl-ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main { flex: 1; }
+a { color: var(--gl-green); }
+.btn-success { background: var(--gl-green); border-color: var(--gl-green); }
+.btn-success:hover, .btn-success:focus { background: #0b6332; border-color: #0b6332; }
+.btn-outline-success { color: var(--gl-green); border-color: var(--gl-green); }
+.btn-outline-success:hover { background: var(--gl-green); border-color: var(--gl-green); }
+.text-success { color: var(--gl-green) !important; }
+.bg-success { background-color: var(--gl-green) !important; }
+.form-control:focus, .form-select:focus { border-color: var(--gl-green-2); box-shadow: 0 0 0 .2rem rgba(63, 174, 90, .2); }
+
+/* ---------- แถบนำทาง ---------- */
+.gl-nav { background: #fff; border-bottom: 1px solid var(--gl-line); }
+.navbar-brand { font-weight: 700; color: var(--gl-green) !important; }
+.logo-mark { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--gl-green); color: #fff; }
+.logo-sub { font-weight: 500; color: var(--gl-green-2); }
+.gl-nav .nav-link { border-radius: 999px; padding: .4rem .8rem !important; white-space: nowrap; }
+.gl-nav .nav-link.active { background: var(--gl-soft); color: var(--gl-green) !important; font-weight: 600; }
+.chip { display: inline-flex; align-items: center; gap: .3rem; padding: .3rem .75rem; border-radius: 999px; background: var(--gl-soft); color: var(--gl-green); font-weight: 600; text-decoration: none; font-size: .9rem; }
+.avatar { border-radius: 50%; object-fit: cover; }
+.avatar-text { display: inline-grid; place-items: center; background: var(--gl-green); color: #fff; font-weight: 600; }
+
+/* ---------- ส่วนประกอบทั่วไป ---------- */
+.page-head { margin-bottom: 1.25rem; }
+.page-head h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: .25rem; }
+.panel { background: #fff; border: 1px solid var(--gl-line); border-radius: 16px; padding: 1.25rem; }
+.panel + .panel { margin-top: 1rem; }
+.panel h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 1rem; }
+.auth-wrap { max-width: 460px; margin: 1rem auto; }
+.stat { background: #fff; border: 1px solid var(--gl-line); border-radius: 16px; padding: 1rem 1.1rem; height: 100%; }
+.stat .label { font-size: .85rem; color: #5d6f63; }
+.stat .value { font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
+.stat .unit { font-size: .8rem; color: #5d6f63; }
+.stat.green { background: var(--gl-green); border-color: var(--gl-green); color: #fff; }
+.stat.green .label, .stat.green .unit { color: #d9eedf; }
+.empty { text-align: center; color: #7a8a80; padding: 2rem 1rem; }
+.table { vertical-align: middle; }
+.table thead th { white-space: nowrap; background: var(--gl-soft); border-bottom: 0; font-weight: 600; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]::after { content: " ↕"; opacity: .35; }
+th[data-sort].asc::after { content: " ↑"; opacity: 1; }
+th[data-sort].desc::after { content: " ↓"; opacity: 1; }
+.chart-box { position: relative; width: 100%; }
+.nav-pills .nav-link { color: var(--gl-green); }
+.nav-pills .nav-link.active { color: #fff; }
+.tip { background: var(--gl-soft); border-left: 4px solid var(--gl-green-2); border-radius: 10px; padding: .75rem 1rem; }
+.tip + .tip { margin-top: .5rem; }
+
+/* ---------- หน้าแรก ---------- */
+.hero { background: linear-gradient(135deg, #0f7b3f, #3fae5a); color: #fff; padding: 3rem 0; }
+.hero h1 { font-weight: 700; font-size: 2rem; }
+.hero .btn-light { color: var(--gl-green); font-weight: 600; }
+.loop-step { text-align: center; padding: 1rem .5rem; }
+.loop-step .ico { font-size: 2rem; }
+.campaign-bar { background: #fff7d6; border: 1px solid #f1dc8a; border-radius: 14px; padding: .75rem 1rem; }
+
+/* ---------- ตลาดมือสอง ---------- */
+.product-card { border: 1px solid var(--gl-line); border-radius: 16px; overflow: hidden; }
+.product-card .thumb { display: block; aspect-ratio: 4 / 3; background: var(--gl-soft); }
+.product-card .thumb img, .product-detail-img img { width: 100%; height: 100%; object-fit: cover; }
+.ph { width: 100%; height: 100%; display: grid; place-items: center; font-size: 3.5rem; }
+.product-card .title { font-weight: 600; color: var(--gl-ink); text-decoration: none; display: block; }
+.price { font-weight: 700; color: var(--gl-green); font-size: 1.1rem; }
+.co2-tag { font-size: .8rem; background: var(--gl-soft); color: var(--gl-green); border-radius: 999px; padding: .15rem .55rem; white-space: nowrap; }
+.product-detail-img { aspect-ratio: 4 / 3; background: var(--gl-soft); border-radius: 16px; overflow: hidden; }
+
+/* ---------- Net Zero ---------- */
+.fp-group { border: 1px solid var(--gl-line); border-radius: 14px; padding: 1rem; background: #fff; }
+.fp-group h3 { font-size: 1rem; font-weight: 700; }
+.fp-total { position: sticky; bottom: 0; background: #fff; border-top: 2px solid var(--gl-green); padding: .75rem 1rem; border-radius: 14px 14px 0 0; box-shadow: 0 -4px 14px rgba(0, 0, 0, .06); }
+.netzero .progress { height: 1.5rem; border-radius: 999px; background: var(--gl-soft); }
+.level-badge { display: inline-flex; align-items: center; gap: .4rem; background: var(--gl-soft); border-radius: 999px; padding: .35rem .9rem; font-weight: 600; }
+.rank { width: 2rem; height: 2rem; display: inline-grid; place-items: center; border-radius: 50%; background: var(--gl-soft); font-weight: 700; }
+
+/* ---------- ส่วนท้าย ---------- */
+.gl-footer { background: #123d26; color: #e6f3ea; padding: 2rem 0 1rem; margin-top: 2rem; }
+.gl-footer h6 { font-weight: 700; }
+.gl-footer a { display: block; color: #cfe6d6; text-decoration: none; font-size: .9rem; padding: .1rem 0; }
+.gl-footer hr { border-color: rgba(255, 255, 255, .25); }
+
+/* ---------- ระบบผู้ดูแล ---------- */
+.admin-shell { display: flex; min-height: 100vh; width: 100%; }
+.admin-side { width: 240px; flex-shrink: 0; background: #123d26; color: #d9eedf; padding: 1rem .75rem; }
+.admin-side .brand { display: block; color: #fff; font-weight: 700; font-size: 1.15rem; text-decoration: none; padding: .25rem .5rem 1rem; }
+.admin-side .brand small { color: #9fd3ae; font-weight: 500; }
+.admin-side .item { display: flex; align-items: center; gap: .5rem; width: 100%; color: #d9eedf; text-decoration: none; padding: .5rem .65rem; border-radius: 10px; border: 0; background: none; text-align: left; white-space: nowrap; }
+.admin-side .item:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.admin-side .item.active { background: var(--gl-green-2); color: #fff; font-weight: 600; }
+.admin-side .item .badge { margin-left: auto; }
+.admin-main { flex: 1; min-width: 0; padding: 1.25rem; }
+.admin-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; gap: 1rem; }
+.admin-top h1 { font-size: 1.4rem; font-weight: 700; margin: 0; }
+.bell { position: relative; font-size: 1.3rem; text-decoration: none; }
+.bell .dot { position: absolute; top: -6px; right: -10px; background: #dc3545; color: #fff; font-size: .68rem; border-radius: 999px; padding: 0 .35rem; }
+.noti { border-left: 4px solid var(--gl-line); }
+.noti.unread { border-left-color: #f0ad1c; background: #fffdf3; }
+.print-head { display: none; }
+
+@media (max-width: 991.98px) {
+  .admin-shell { flex-direction: column; }
+  .admin-side { width: 100%; padding: .6rem .75rem; }
+  .admin-side .brand { padding-bottom: .5rem; }
+  .admin-side nav { display: flex; gap: .25rem; overflow-x: auto; padding-bottom: .25rem; }
+  .admin-side .item { width: auto; }
+  .admin-side .item .badge { margin-left: .25rem; }
+  .hero { padding: 2rem 0; }
+  .hero h1 { font-size: 1.5rem; }
+}
+
+/* ---------- พิมพ์รายงาน ---------- */
+@media print {
+  @page { size: A4; margin: 14mm; }
+  body { background: #fff; display: block; font-size: 11pt; }
+  .gl-nav, .gl-footer, .admin-side, .admin-top, .no-print, .alert, .btn { display: none !important; }
+  .admin-main, main { padding: 0 !important; }
+  .panel, .stat { border: 1px solid #999; }
+  .stat, .chart-box { break-inside: avoid; }
+  .chart-box { height: auto !important; }
+  .h-100 { height: auto !important; }
+  .tip { break-inside: avoid; }
+  .chart-box canvas { margin: 0 auto; }
+  .stat.green { background: #fff; color: #000; }
+  .stat.green .label, .stat.green .unit { color: #333; }
+  .print-head { display: block; text-align: center; margin-bottom: 10pt; }
+  .print-head h2 { font-size: 15pt; margin: 0; }
+  .table { font-size: 9.5pt; }
+  .table thead th { background: #eee !important; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  th[data-sort]::after { content: ""; }
+  a { color: #000; text-decoration: none; }
+  .table-responsive { overflow: visible; }
+}

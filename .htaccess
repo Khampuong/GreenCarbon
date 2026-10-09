@@ -1,0 +1,7 @@
+Options -Indexes
+DirectoryIndex index.php
+
+# ไฟล์ที่ไม่ควรเปิดผ่านเบราว์เซอร์โดยตรง
+<FilesMatch "^(config\.php|database\.sql|README\.md|\.gitignore)$">
+    Require all denied
+</FilesMatch>
